@@ -1,0 +1,2 @@
+#传输的消息体，与entity-body的区别是在被transfer-encoding编码的情况下entity-body = message-body decode by transfer-encoding
+message-body = entity-body | <entity-body encoded as per transfer-encoding>

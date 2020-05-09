@@ -1,0 +1,2 @@
+#指示为在发件人和收件人之间安全传输邮件正文而对邮件正文应用的转换类型（如果有）content-encoding与transfer-encoding区别是transfer-encoding是message属性不是entity属性
+transfer-encoding = "Transfer-Encoding" ":" 1#transfer-coding

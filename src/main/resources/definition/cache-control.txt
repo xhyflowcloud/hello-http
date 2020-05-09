@@ -1,0 +1,28 @@
+#代表request/response共同遵守的缓存机制，防止缓存干扰request/response
+cache-control            = "Cache-Control" ":" 1#cache-directive
+cache-directive          = cache-request-directive | cache-response-directive
+cache-request-directive  = "no-cache"
+                         | "no-store"
+                         | "max-age" "=" delta-seconds
+                         | "max-stale" [ "=" delta-seconds ]
+                         | "min-fresh" "=" delta-seconds
+                         | "no-transform"
+                         | "only-if-cached"
+                         | cache-extension
+cache-response-directive = "public"
+                         | "private" [ "=" <"> 1#field-name <"> ]
+                         | "no-cache" [ "=" <"> 1#field-name <"> ]
+                         | "no-store"
+                         | "no-transform"
+                         | "must-revalidate"
+                         | "proxy-revalidate"
+                         | "max-age" "=" delta-seconds
+                         | "s-maxage" "=" delta-seconds
+                         | cache-extension
+                         cache-extension = token [ "=" ( token | quoted-string )
+#What is Cacheable
+public #表明response可以被任何缓存缓存
+private #表明response是针对单个用户的，不能被共享的缓存缓存
+no-cache #如果no-cache指令未指定字段名，则在未成功与源服务器重新验证之前，缓存不能使用响应来满足后续请求。这允许服务器防止过期的response返回给客户端。如果no-cache指令确实指定了一个或多个字段名，则缓存可以使用响应来满足后续请求，但要遵守对缓存的任何其他限制。但是，在未成功与源服务器重新验证的情况下，不能在响应后续请求时发送指定的字段名。这允许源服务器防止在响应中重用某些头字段，同时仍然允许缓存其余响应。
+#What May be Stored by Caches
+no-store #用来阻止意外的释放或者保留敏感信息，
