@@ -1,0 +1,2 @@
+#表明响应的过期时间， e.g: Expires: Thu, 01 Dec 1994 16:00:00 GMT
+expires = "Expires" ":" HTTP-date

@@ -1,0 +1,10 @@
+method = "OPTIONS"
+        | "GET"
+        | "HEAD"
+        | "POST"
+        | "PUT"
+        | "DELETE"
+        | "TRACE"
+        | "CONNECT"
+        | extension-method
+        extension-method = token

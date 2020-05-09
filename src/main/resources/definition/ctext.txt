@@ -1,0 +1,1 @@
+ctext = <any text excluding "(" and ")">

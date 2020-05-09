@@ -1,0 +1,2 @@
+text = <any octet except ctls,
+       but including lws>

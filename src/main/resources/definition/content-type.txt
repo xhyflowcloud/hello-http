@@ -1,0 +1,2 @@
+#Content-Type表明实体的媒体类型，例如Content-Type: text/html; charset=ISO-8859-4
+Content-Type = "Content-Type" ":" media-type

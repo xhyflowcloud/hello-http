@@ -1,0 +1,10 @@
+message-header = field-name ":" [ field-value ]
+field-name     = token
+field-value    = *( field-content | lws )
+field-content  = <the octets making up the field-value
+                 and consisting of either *text or combinations
+                 of token, separators, and quoted-string>
+
+
+
+

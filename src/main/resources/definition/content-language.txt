@@ -1,0 +1,2 @@
+#表示实体entity目标读者的自然语言,例如Content-Language: en
+content-language = "Content-Language" ":" 1#language-tag

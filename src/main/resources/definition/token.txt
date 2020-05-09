@@ -1,0 +1,1 @@
+token = 1*<any char except ctls or separators>

@@ -1,0 +1,2 @@
+#提供一个Content-Location可能被用来为Entity实体获取位置跟请求的URI不同位置信息
+content-location = "Content-Location" ":" ( absoluteURI | relativeURI )

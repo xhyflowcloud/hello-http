@@ -1,0 +1,2 @@
+#Last-Modified指示源服务器认为变量最后修改的日期和时间。e.g:Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT
+last-modified = "Last-Modified" ":" HTTP-date

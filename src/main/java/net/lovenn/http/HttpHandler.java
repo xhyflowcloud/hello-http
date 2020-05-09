@@ -56,6 +56,10 @@ public class HttpHandler implements Runnable {
             sc.close();
         } else {
             bf.flip();
+//            byte[] ba = new byte[1024];
+//            bf.get(ba, 0, bf.limit());
+//            System.out.println(new String(ba, Charset.forName("US-ASCII")));
+
             String receivedString = Charset.forName(lcs).newDecoder().decode(bf).toString();
             String[] requestMessage = receivedString.split("\r\n");
             for (String s: requestMessage) {
@@ -71,6 +75,8 @@ public class HttpHandler implements Runnable {
             System.out.println("url:\t" + firstLine[1]);
             System.out.println("HTTP Version:\t" + firstLine[2]);
             System.out.println();
+            HttpRequest request = new HttpRequest();
+            request.parse(bf);
 
             // 返回客户端
 //            StringBuilder sendString = new StringBuilder();
@@ -89,13 +95,38 @@ public class HttpHandler implements Runnable {
 //            sendString.append("</body>");
 //            sendString.append("</html>");
 
-            StringBuilder sendString = new StringBuilder();
-            sendString.append("HTTP/1.1 200 OK\r\n");//响应报文首行，200表示处理成功
-            sendString.append("Content-Type:text/plain;charset=" + lcs + "\r\n");
-            sendString.append("\r\n");// 报文头结束后加一个空行
+//            HttpResponse response = new HttpResponse();
+//            response.setHttpVersion("HTTP/1.1");
+//            response.setStatusCode("200");
+//            response.setReasonPhrase("OK");
+//            response.addResponseHeader("Content-Type", "text/html;charset=" + lcs);
+//            response.write("<!DOCTYPE html>");
+//            response.write("<html lang=\"en\">");
+//            response.write("<head>");
+//            response.write("    <meta charset=\"UTF-8\">");
+//            response.write("    <title>Title</title>");
+//            response.write("</head>");
+//            response.write("<body>");
+//            response.write("    <h4>hello world! </h4>");
+//            response.write("</body>");
+//            response.write("</html>");
 
-            sendString.append("{\"a\":\"b\"}");
-            bf = ByteBuffer.wrap(sendString.toString().getBytes(lcs));
+            HttpResponse response = new HttpResponse();
+            response.setHttpVersion("HTTP/1.1");
+            response.setStatusCode("200");
+            response.setReasonPhrase("OK");
+            //response.addResponseHeader("Content-Type", "text/plain;charset=" + lcs);
+            response.addResponseHeader("Access-Control-Allow-Origin", "*");
+            //response.addResponseHeader("Allow","OPTIONS, GET, HEAD, POST");
+            //response.addResponseHeader("Access-Control-Allow-Methods", "OPTIONS, GET, HEAD, POST");
+            //response.addResponseHeader("Access-Control-Allow-Headers", "Content-Type");
+            //response.addResponseHeader("Cache-Control", "max-age=604800");
+            //response.addResponseHeader("Content-Length", "0");
+            //response.addResponseHeader("Content-Type", "application/json;");
+            response.addResponseHeader("Content-Location", "/a");
+            //response.write("{\"a\":\"b\"}");
+
+            bf = ByteBuffer.wrap(response.getResponse());
             sc.write(bf);
             sc.close();
         }

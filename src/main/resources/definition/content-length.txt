@@ -1,0 +1,2 @@
+#表明实体entity的字节(octet)数目,例如Content-Length: 3495
+content-length = "Content-Length" ":" 1*digit

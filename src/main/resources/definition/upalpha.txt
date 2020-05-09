@@ -1,0 +1,1 @@
+upalpha = <any US-ASCII uppercase letter "A".."Z">

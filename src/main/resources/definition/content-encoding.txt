@@ -1,0 +1,2 @@
+#对content-type的修饰符,当该头部出现时,表明content-encoding携带的内容编码方式已经应用到了content-type,因此必须按顺序对content-type解码,例如:Content-Encoding: gzip
+content-encoding = "Content-Encoding" ":" 1#content-coding

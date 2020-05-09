@@ -1,0 +1,2 @@
+#请求URI所标识的资源支持的方法,例如Allow: GET, HEAD, PUT
+allow = "Allow" ":" #method

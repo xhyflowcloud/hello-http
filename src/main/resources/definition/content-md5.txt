@@ -1,0 +1,3 @@
+#Content-MD5被用来提供一个实体的完整性检查的，通常被服务器或者客户端产生
+content-md5 = "Content-MD5" ":" md5-digest
+md5-digest = <base64 of 128 bit MD5 digest as per RFC 1864>

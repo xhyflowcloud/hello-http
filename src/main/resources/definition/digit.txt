@@ -1,0 +1,1 @@
+digit = <any US-ASCII digit "0".."9">
