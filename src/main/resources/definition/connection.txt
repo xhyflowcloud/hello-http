@@ -1,0 +1,3 @@
+#允许发送方指定特定连接所需的选项，并且不能通过代理通过其他连接进行通信。
+Connection       = "Connection" ":" 1#(connection-token)
+connection-token = token

@@ -1,0 +1,2 @@
+#Date字段表示消息起源的日期和时间，其语义与RFC 822中的orig-date相同。e.g: Date: Tue, 15 Nov 1994 08:12:31 GMT
+date = "Date" ":" HTTP-date

@@ -26,3 +26,12 @@ private #表明response是针对单个用户的，不能被共享的缓存缓存
 no-cache #如果no-cache指令未指定字段名，则在未成功与源服务器重新验证之前，缓存不能使用响应来满足后续请求。这允许服务器防止过期的response返回给客户端。如果no-cache指令确实指定了一个或多个字段名，则缓存可以使用响应来满足后续请求，但要遵守对缓存的任何其他限制。但是，在未成功与源服务器重新验证的情况下，不能在响应后续请求时发送指定的字段名。这允许源服务器防止在响应中重用某些头字段，同时仍然允许缓存其余响应。
 #What May be Stored by Caches
 no-store #用来阻止意外的释放或者保留敏感信息，
+#Modifications of the Basic Expiration Mechanism
+max-age #表示客户端愿意接受其时间不大于以秒为单位的指定时间的响应
+min-fresh #表示客户端愿意接受其新鲜度生存期不小于其当前年龄加上以秒为单位的指定时间的响应。也就是说，客户机希望响应至少在指定的秒数内保持新鲜。
+max-stale #表示客户端愿意接受已超过其过期时间的响应。如果为max stale分配了一个值，则客户端愿意接受已超过其过期时间不超过指定秒数的响应。如果没有为max stale赋值，则客户机愿意接受任何年龄段的陈旧响应。
+#Cache Revalidation and Reload Controls
+max-age #重新验证缓存
+only-if-cached #返回已经被存储的。
+must-revalidate #必须重新验证
+proxy-revalidate #同must-revalidate 不能应用到非共享的缓存

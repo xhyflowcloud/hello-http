@@ -1,0 +1,2 @@
+#Trailer字段值指示给定的头字段集存在于用分块传输编码编码的消息的尾部中。
+trailer = "Trailer" ":" 1#field-name

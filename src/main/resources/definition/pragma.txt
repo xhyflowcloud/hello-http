@@ -1,0 +1,5 @@
+#pragma被用来描述特别的指令针对协议的特定实现
+pragma           = "Pragma" ":" 1#pragma-directive
+pragma-directive = "no-cache" | extension-pragma
+extension-pragma = token [ "=" ( token | quoted-string ) ]
+extension-pragma = token [ "=" ( token | quoted-string ) ]
