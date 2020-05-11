@@ -38,16 +38,15 @@ public enum HeadEnum {
 
     public enum  GeneralHeadEnum {
 
-        ALLOW("Allow", "allow"),
-        CONTENT_ENCODING("Content-Encoding", "content-encoding"),
-        CONTENT_LANGUAGE("Content-Language", "content-language"),
-        CONTENT_LENGTH("Content-Length", "content-length"),
-        CONTENT_LOCATION("Content-Location", "content-location"),
-        CONTENT_MD5("Content-MD5", "content-md5"),
-        CONTENT_RANGE("Content-Range", "content-range"),
-        CONTENT_TYPE("Content-Type", "content-type"),
-        EXPIRES("Expires", "expires"),
-        LAST_MODIFIED("Last-Modified", "last-modified"),
+        CACHE_CONTROL("Cache-Control", "cache-control"),
+        CONNECTION("Connection", "connection"),
+        DATE("Date", "date"),
+        PRAGMA("Pragma", "pragma"),
+        TRAILER("Trailer", "trailer"),
+        TRANSFER_ENCODING("Transfer-Encoding", "transfer-encoding"),
+        UPGRADE("Upgrade", "upgrade"),
+        VIA("Via", "via"),
+        WARNING("Warning", "warning"),
         ;
 
         private String field;

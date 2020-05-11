@@ -1,0 +1,2 @@
+#Upgrade允许客户机指定它支持哪些附加通信协议，如果服务器发现它适合于交换协议，则它将使用哪些附加通信协议。e.g: Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
+upgrade = "Upgrade" ":" 1#product

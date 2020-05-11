@@ -1,0 +1,7 @@
+#网关和代理必须使用Via字段来指示请求时用户代理和服务器之间以及响应时源服务器和客户端之间的中间协议和收件人。
+via = "Via" ":" 1#( received-protocol received-by [ comment ] )
+received-protocol = [ protocol-name "/" ] protocol-version
+protocol-name     = token
+protocol-version  = token
+received-by       = ( host [ ":" port ] ) | pseudonym
+pseudonym         = token

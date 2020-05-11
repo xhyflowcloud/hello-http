@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d829be-07ac-45dc-9dfe-5b86c7aa489f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/connection.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/date.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/pragma.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/trailer.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/upgrade.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/via.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/warning.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/definition/cache-control.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/definition/cache-control.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,28 +22,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/transfer-encoding.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/EntityHeadEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="61" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/general-header.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="525">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/cache-control.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/upgrade.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            <state>
+              <caret column="57" selection-start-column="57" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/via.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/warning.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/jdk1.8/src.zip!/java/lang/Enum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -76,38 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/definition/trailer.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HttpTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/content-md5.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/content-location.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="21" selection-start-column="5" selection-end-column="21" />
+              <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -149,9 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/definition/OCTET.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/CHAR.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/char.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/octet.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/upalpha.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/loalpha.txt" />
@@ -194,12 +190,15 @@
         <option value="$PROJECT_DIR$/src/main/resources/definition/message-body.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/transfer-encoding.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/general-header.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/cache-control.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/connection.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/date.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/pragma.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/trailer.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/upgrade.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/via.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/warning.txt" />
       </list>
     </option>
   </component>
@@ -466,7 +465,7 @@
       <workItem from="1588930056033" duration="13278000" />
       <workItem from="1588990790426" duration="11000" />
       <workItem from="1588993624892" duration="5321000" />
-      <workItem from="1589020512588" duration="2737000" />
+      <workItem from="1589020512588" duration="3588000" />
     </task>
     <task id="LOCAL-00001" summary="HttpResponse.java">
       <created>1588816918547</created>
@@ -489,11 +488,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589000138173</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GeneralHeadEnum">
+      <created>1589160841681</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589160841681</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54906000" />
+    <option name="totallyTimeSpent" value="55757000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -585,7 +591,8 @@
     <MESSAGE value="HttpResponse.java" />
     <MESSAGE value="EntityHeadEnum" />
     <MESSAGE value="cache-control" />
-    <option name="LAST_COMMIT_MESSAGE" value="cache-control" />
+    <MESSAGE value="GeneralHeadEnum" />
+    <option name="LAST_COMMIT_MESSAGE" value="GeneralHeadEnum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -645,34 +652,6 @@ bf.get(a)</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/ctl.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/cr.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/lf.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/sp.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/ht.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -905,20 +884,6 @@ bf.get(a)</expression-string>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/EntityHeadEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="57" column="58" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/message-body.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -992,7 +957,49 @@ bf.get(a)</expression-string>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/trailer.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/EntityHeadEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/upgrade.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="57" selection-start-column="57" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/via.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/warning.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>

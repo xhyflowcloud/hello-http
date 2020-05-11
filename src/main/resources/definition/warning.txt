@@ -1,0 +1,7 @@
+#Warning字段用于携带有关消息状态或转换的附加信息，这些信息可能不会反映在消息中。此信息通常用于警告应用于消息实体体的缓存操作或转换可能缺乏语义透明度。
+Warning       = "Warning" ":" 1#warning-value
+warning-value = warn-code SP warn-agent SP warn-text [SP warn-date]
+warn-code     = 3DIGIT
+warn-agent    = ( host [ ":" port ] ) | pseudonym
+warn-text     = quoted-string
+warn-date     = <"> HTTP-date <">
