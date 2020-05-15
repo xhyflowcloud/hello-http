@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d829be-07ac-45dc-9dfe-5b86c7aa489f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/accept-charset.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/accept-encoding.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/accept-language.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/accept-ranges.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/accept.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/authorization.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/entity-tag.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/etag.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/expect.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/from.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/host.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/if-match.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/if-modified-since.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/if-none-match.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/if-range.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/if-unmodified-since.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/max-forwards.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/proxy-authorization.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/range.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/referer.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/request-header.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/te.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/user-agent.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/vary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/age.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/location.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/proxy-authenticate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/retry-after.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/server.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/definition/www-authenticate.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" afterDir="false" />
     </list>
@@ -43,7 +25,52 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/if-unmodified-since.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/cache-control.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/connection.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="122" column="24" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/www-authenticate.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/location.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/proxy-authenticate.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
@@ -52,82 +79,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/max-forwards.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/retry-after.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/server.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/age.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/proxy-authorization.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/referer.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/te.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/user-agent.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/vary.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="40" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/range-unit.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/range.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/definition/etag.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -169,12 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/definition/entity-header.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/allow.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/content-encoding.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/content-language.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/definition/content-length.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/Http.html" />
         <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/HttpHandler.java" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/content-location.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/content-md5.txt" />
@@ -218,8 +194,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/definition/te.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/user-agent.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/vary.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" />
         <option value="$PROJECT_DIR$/src/main/resources/definition/range.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/age.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/location.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/proxy-authenticate.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/retry-after.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/server.txt" />
+        <option value="$PROJECT_DIR$/src/main/resources/definition/www-authenticate.txt" />
       </list>
     </option>
   </component>
@@ -491,7 +473,7 @@
       <workItem from="1589422241653" duration="5540000" />
       <workItem from="1589449541023" duration="2327000" />
       <workItem from="1589455349189" duration="19000" />
-      <workItem from="1589534891443" duration="4857000" />
+      <workItem from="1589534891443" duration="6570000" />
     </task>
     <task id="LOCAL-00001" summary="HttpResponse.java">
       <created>1588816918547</created>
@@ -528,11 +510,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589161631418</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="RequestHeadEnum">
+      <created>1589540182771</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589540182771</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68551000" />
+    <option name="totallyTimeSpent" value="70264000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +614,8 @@
     <MESSAGE value="EntityHeadEnum" />
     <MESSAGE value="cache-control" />
     <MESSAGE value="GeneralHeadEnum" />
-    <option name="LAST_COMMIT_MESSAGE" value="GeneralHeadEnum" />
+    <MESSAGE value="RequestHeadEnum" />
+    <option name="LAST_COMMIT_MESSAGE" value="RequestHeadEnum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,51 +675,6 @@ bf.get(a)</expression-string>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/Http.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HttpHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="125" column="12" lean-forward="true" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/last-modified.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="39" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/content-type.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="68" selection-start-column="68" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/expires.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/content-language.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -787,13 +732,6 @@ bf.get(a)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/cache-control.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/upgrade.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -812,13 +750,6 @@ bf.get(a)</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="54" column="7" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/connection.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -878,13 +809,6 @@ bf.get(a)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/accept-encoding.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="69" selection-start-column="69" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/accept-language.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -931,13 +855,6 @@ bf.get(a)</expression-string>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/etag.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1018,13 +935,6 @@ bf.get(a)</expression-string>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="78" column="29" lean-forward="true" selection-start-line="78" selection-start-column="29" selection-end-line="78" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/range-unit.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1034,8 +944,85 @@ bf.get(a)</expression-string>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/definition/range.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/accept-encoding.txt">
+      <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <caret column="69" selection-start-column="69" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/cache-control.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="46" lean-forward="true" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/connection.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" lean-forward="true" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/age.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/etag.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/location.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/proxy-authenticate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="57" selection-start-line="1" selection-start-column="57" selection-end-line="1" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/retry-after.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/server.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/lovenn/http/HeadEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="122" column="24" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/definition/www-authenticate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="53" lean-forward="true" selection-start-line="1" selection-start-column="53" selection-end-line="1" selection-end-column="53" />
         </state>
       </provider>
     </entry>

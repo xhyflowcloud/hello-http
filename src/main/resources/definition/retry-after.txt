@@ -1,0 +1,5 @@
+#可与503（服务不可用）响应一起使用，以指示请求客户端预期服务不可用的时间。
+Retry-After = "Retry-After" ":" ( HTTP-date | delta-seconds )
+e.g:
+Retry-After: Fri, 31 Dec 1999 23:59:59 GMT
+Retry-After: 120

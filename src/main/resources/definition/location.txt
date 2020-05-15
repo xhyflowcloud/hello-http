@@ -1,0 +1,4 @@
+#将收件人重定向到请求URI以外的位置，以完成请求或标识新资源。
+Location = "Location" ":" absoluteURI
+e.g:
+Location: http://www.w3.org/pub/WWW/People.html

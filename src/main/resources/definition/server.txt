@@ -1,0 +1,4 @@
+#包含有关源服务器用于处理请求
+Server = "Server" ":" 1*( product | comment )
+e.g:
+Server: CERN/3.0 libwww/2.17

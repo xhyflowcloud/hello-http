@@ -110,5 +110,35 @@ public enum HeadEnum {
         }
     }
 
+    public enum  ResponseHeadEnum {
 
+        ACCEPT_RANGES("Accept-Ranges", "accept-ranges"),
+        AGE("Age", "age"),
+        ETAG("ETag", "etag"),
+        LOCATION("Location", "location"),
+        PROXY_AUTHENTICATE("Proxy-Authenticate", "proxy-authenticate"),
+        TRANSFER_ENCODING("Transfer-Encoding", "transfer-encoding"),
+        RETRY_AFTER("Retry-After", "retry-after"),
+        VARY("Vary", "vary"),
+        WWW_AUTHENTICATE("WWW-Authenticate", "www-authenticate"),
+        ;
+
+        private String field;
+
+        private String definition;
+
+
+        ResponseHeadEnum(String field, String definition) {
+            this.field = field;
+            this.definition = definition;
+        }
+
+        public String getField() {
+            return field;
+        }
+
+        public String getDefinition() {
+            return definition;
+        }
+    }
 }

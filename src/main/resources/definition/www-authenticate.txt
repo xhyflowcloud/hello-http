@@ -1,0 +1,2 @@
+#WWW身份验证响应头字段必须包含在401（未授权）响应消息中。字段值至少包含一个质询，该质询指示适用于请求URI的身份验证方案和参数。
+WWW-Authenticate = "WWW-Authenticate" ":" 1#challenge

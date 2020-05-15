@@ -1,0 +1,2 @@
+#必须包含在407（需要代理身份验证）响应中。字段值由一个质询组成，该质询指示适用于此请求URI的代理的身份验证方案和参数。
+Proxy-Authenticate = "Proxy-Authenticate" ":" 1#challenge
