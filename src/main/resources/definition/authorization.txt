@@ -1,0 +1,2 @@
+#一个用户代理希望在服务器上对自己进行身份验证（通常，但不一定是在收到401响应之后），通过在请求中包含一个授权请求头字段来实现。
+Authorization = "Authorization" ":" credentials

@@ -1,0 +1,2 @@
+#验证不匹配的内容
+If-None-Match = "If-None-Match" ":" ( "*" | 1#entity-tag )

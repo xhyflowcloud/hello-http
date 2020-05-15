@@ -1,0 +1,3 @@
+#限制了作为请求响应首选的自然语言集。 e.g: Accept-Language: da, en-gb;q=0.8, en;q=0.7
+Accept-Language = "Accept-Language" ":" 1#( language-range [ ";" "q" "=" qvalue ] )
+language-range  = ( ( 1*8ALPHA *( "-" 1*8ALPHA ) ) | "*" )

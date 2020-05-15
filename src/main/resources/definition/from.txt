@@ -1,0 +1,2 @@
+#（如果给定）应包含控制请求用户代理的用户的Internet电子邮件地址。e.g: From: webmaster@w3.org
+From = "From" ":" mailbox

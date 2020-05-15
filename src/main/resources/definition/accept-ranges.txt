@@ -1,0 +1,3 @@
+#允许服务器指示其接受资源的范围请求
+Accept-Ranges     = "Accept-Ranges" ":" acceptable-ranges
+acceptable-ranges = 1#range-unit | "none"

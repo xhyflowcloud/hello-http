@@ -1,0 +1,2 @@
+#用户代理请求头字段包含有关发起请求的用户代理的信息。
+User-Agent = "User-Agent" ":" 1*( product | comment )

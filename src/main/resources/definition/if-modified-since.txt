@@ -1,0 +1,4 @@
+#与使其成为条件的方法一起使用：如果请求的变量自该字段中指定的时间以来未被修改，则不会从服务器返回实体；相反，将返回304（未修改）响应，而不返回任何消息正文。
+If-Modified-Since = "If-Modified-Since" ":" HTTP-date
+e.g:
+If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT

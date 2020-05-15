@@ -1,0 +1,8 @@
+#可用于指定响应可接受的媒体类型。e.g:Accept: audio/*; q=0.2, audio/basic
+Accept           = "Accept" ":" #( media-range [ accept-params ] )
+media-range      = ( "*/*"
+                 | ( type "/" "*" )
+                 | ( type "/" subtype )
+                 ) *( ";" parameter )
+accept-params    = ";" "q" "=" qvalue *( accept-extension )
+accept-extension = ";" token [ "=" ( token | quoted-string ) ]

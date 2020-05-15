@@ -1,0 +1,2 @@
+#验证包含的标签信息
+If-Match = "If-Match" ":" ( "*" | 1#entity-tag )

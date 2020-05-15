@@ -1,0 +1,2 @@
+#Referer请求头字段允许客户端为了服务器的利益指定从中获取请求URI的资源的地址（URI）
+Referer = "Referer" ":" ( absoluteURI | relativeURI )

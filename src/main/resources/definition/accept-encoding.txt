@@ -1,0 +1,3 @@
+#响应可接收的内容编码。 e.g: Accept-Encoding: gzip;q=1.0, identity; q=0.5, *;q=0
+Accept-Encoding = "Accept-Encoding" ":" 1#( codings [ ";" "q" "=" qvalue ] )
+codings         = ( content-coding | "*" )

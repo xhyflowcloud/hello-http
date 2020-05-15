@@ -1,0 +1,3 @@
+#表明响应可接收的字符集。e.g: Accept-Charset: iso-8859-5, unicode-1-1;q=0.8
+accept-charset = "Accept-Charset" ":"
+                 1#( ( charset | "*" )[ ";" "q" "=" qvalue ] )

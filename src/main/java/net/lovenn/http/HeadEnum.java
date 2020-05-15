@@ -68,5 +68,47 @@ public enum HeadEnum {
         }
     }
 
+    public enum  RequestHeadEnum {
+
+        ACCEPT("Accept", "accept"),
+        ACCEPT_CHARSET("Accept-Charset", "accept-charset"),
+        ACCEPT_ENCODING("Accept-Encoding", "accept-encoding"),
+        ACCEPT_LANGUAGE("Accept-Language", "accept-language"),
+        AUTHORIZATION("Authorization", "authorization"),
+        EXPECT("Expect", "expect"),
+        FROM("From", "from"),
+        HOST("Host", "host"),
+        IF_MATCH("If-Match", "if-match"),
+        IF_MODIFIED_SINCE("If-Modified-Since", "if-modified-since"),
+        IF_NONE_MATCH("If-None-Match", "if-none-match"),
+        IF_RANGE("If-Range", "if-range"),
+        IF_UNMODIFIED_SINCE("If-Unmodified-Since", "if-unmodified-since"),
+        MAX_FORWARDS("Max-Forwards", "max-forwards"),
+        PROXY_AUTHORIZATION("Proxy-Authorization", "proxy-authorization"),
+        RANGE("Range", "range"),
+        REFERER("Referer", "referer"),
+        TE("TE", "te"),
+        USER_AGENT("User-Agent", "user-agent"),
+        ;
+
+        private String field;
+
+        private String definition;
+
+
+        RequestHeadEnum(String field, String definition) {
+            this.field = field;
+            this.definition = definition;
+        }
+
+        public String getField() {
+            return field;
+        }
+
+        public String getDefinition() {
+            return definition;
+        }
+    }
+
 
 }

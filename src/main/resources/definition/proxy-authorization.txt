@@ -1,0 +1,2 @@
+#允许客户端向需要身份验证的代理标识自己（或其用户）。
+Proxy-Authorization = "Proxy-Authorization" ":" credentials

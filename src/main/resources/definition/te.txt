@@ -1,0 +1,7 @@
+#TE请求头字段指示它愿意在响应中接受哪些扩展传输编码，以及它是否愿意在分块传输编码中接受尾部字段。
+TE        = "TE" ":" #( t-codings )
+t-codings = "trailers" | ( transfer-extension [ accept-params ] )
+e.g:
+TE: deflate
+TE:
+TE: trailers, deflate;q=0.5

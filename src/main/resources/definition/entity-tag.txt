@@ -1,0 +1,4 @@
+#用于比较来自同一请求资源的两个或多个实体。
+entity-tag = [ weak ] opaque-tag
+weak       = "W/"
+opaque-tag = quoted-string

@@ -1,0 +1,2 @@
+#如果所请求的变量在指定时间后已被修改，则服务器不能执行所请求的操作，必须返回412（前提条件失败）。
+If-Unmodified-Since = "If-Unmodified-Since" ":" HTTP-date

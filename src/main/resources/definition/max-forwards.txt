@@ -1,0 +1,2 @@
+#提供了一种带有TRACE和OPTIONS方法的机制，用于限制可以将请求转发到下一个入站服务器的代理或网关的数量。
+Max-Forwards = "Max-Forwards" ":" 1*DIGIT
