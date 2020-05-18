@@ -14,9 +14,9 @@ public class HttpResponse {
     private String httpVersion;
     private String statusCode;
     private String reasonPhrase;
-    private Map<String, String> generalHeader = new HashMap<>();
-    private Map<String, String> responseHeader = new HashMap<>();
-    private Map<String, String> entityHeader = new HashMap<>();
+    private Map<String, String> generalHeader = new HashMap<String, String>();
+    private Map<String, String> responseHeader = new HashMap<String, String>();
+    private Map<String, String> entityHeader = new HashMap<String, String>();
     private StringBuilder messageBody = new StringBuilder();
 
     public String getHttpVersion() {

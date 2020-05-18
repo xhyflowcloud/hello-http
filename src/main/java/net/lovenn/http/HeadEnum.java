@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class HeadEnum {
-    static final Map<String, IEnum> headerMap = new HashMap<>();
+    static final Map<String, IEnum> headerMap = new HashMap<String, IEnum>();
     static {
        for (EntityHeadEnum entity : EntityHeadEnum.values()) {
            headerMap.put(entity.getField(), entity);

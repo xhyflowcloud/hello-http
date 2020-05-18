@@ -16,9 +16,9 @@ public class HttpRequest {
     private String method;
     private String requestURI;
     private String httpVersion;
-    private Map<String, String> generalHeader = new HashMap<>();
-    private Map<String, String> requestHeader = new HashMap<>();
-    private Map<String, String> entityHeader = new HashMap<>();
+    private Map<String, String> generalHeader = new HashMap<String, String>();
+    private Map<String, String> requestHeader = new HashMap<String, String>();
+    private Map<String, String> entityHeader = new HashMap<String, String>();
     private byte[] messageBody;
 
     public String getMethod() {

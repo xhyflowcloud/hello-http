@@ -15,7 +15,9 @@ public class HttpUtils {
     static HttpRequest parseHttpRequest(ByteBuffer buffer) {
         HttpRequest request = new HttpRequest();
         //解析HTTP Header
-        if(buffer == null) return null;
+        if(buffer == null) {
+            return null;
+        }
         buffer.flip();
         byte[] rbs = new byte[buffer.limit()];
         buffer.get(rbs);
@@ -28,7 +30,9 @@ public class HttpUtils {
             request.setRequestURI(rlps[1].trim());
             request.setHttpVersion(rlps[2].trim());
             for (int i = 1; i < rls.length; i++) {
-                if(StringUtils.isBlank(rls[i])) break;
+                if(StringUtils.isBlank(rls[i])) {
+                    break;
+                }
                 String[] field = rls[i].split(COLON);
                 if(HeadEnum.contain(field[0].trim())) {
                     HeadEnum.IEnum iEnum = HeadEnum.get(field[0].trim());
