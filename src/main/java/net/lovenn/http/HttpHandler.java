@@ -55,6 +55,8 @@ public class HttpHandler implements Runnable {
         if(sc.read(bf) < 0) {
             sc.close();
         } else {
+            HttpRequest request = HttpUtils.parseHttpRequest(bf.duplicate());
+            System.out.println(request);
             bf.flip();
 //            byte[] ba = new byte[1024];
 //            bf.get(ba, 0, bf.limit());
@@ -75,9 +77,6 @@ public class HttpHandler implements Runnable {
             System.out.println("url:\t" + firstLine[1]);
             System.out.println("HTTP Version:\t" + firstLine[2]);
             System.out.println();
-            HttpRequest request = new HttpRequest();
-            request.parse(bf);
-
             // 返回客户端
 //            StringBuilder sendString = new StringBuilder();
 //            sendString.append("HTTP/1.1 200 OK\r\n");//响应报文首行，200表示处理成功
@@ -118,12 +117,12 @@ public class HttpHandler implements Runnable {
             //response.addResponseHeader("Content-Type", "text/plain;charset=" + lcs);
             response.addResponseHeader("Access-Control-Allow-Origin", "*");
             //response.addResponseHeader("Allow","OPTIONS, GET, HEAD, POST");
-            //response.addResponseHeader("Access-Control-Allow-Methods", "OPTIONS, GET, HEAD, POST");
-            //response.addResponseHeader("Access-Control-Allow-Headers", "Content-Type");
+            response.addResponseHeader("Access-Control-Allow-Methods", "OPTIONS, GET, HEAD, POST");
+            response.addResponseHeader("Access-Control-Allow-Headers", "Content-Type");
             //response.addResponseHeader("Cache-Control", "max-age=604800");
             //response.addResponseHeader("Content-Length", "0");
-            //response.addResponseHeader("Content-Type", "application/json;");
-            response.addResponseHeader("Content-Location", "/a");
+            response.addResponseHeader("Content-Type", "application/json;");
+            //response.addResponseHeader("Content-Location", "/a");
             //response.write("{\"a\":\"b\"}");
 
             bf = ByteBuffer.wrap(response.getResponse());

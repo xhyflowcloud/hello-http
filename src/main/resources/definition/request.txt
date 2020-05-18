@@ -1,0 +1,6 @@
+Request = Request-Line
+        *(( general-header
+        | request-header
+        | entity-header ) CRLF)
+        CRLF
+        [ message-body ]

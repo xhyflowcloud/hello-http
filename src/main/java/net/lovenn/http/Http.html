@@ -6,10 +6,10 @@
 </head>
 <body>
 <script>
-    fetch('http://localhost:8080')
-        .then(function(response) {
-            console.log(response)
-        })
+    // fetch('http://localhost:8080')
+    //     .then(function(response) {
+    //         console.log(response)
+    //     })
 
     function postData(url, data) {
         // Default options are marked with *
@@ -29,7 +29,7 @@
             console.log(response)
         }) // parses response to JSON
     }
-    //postData('http://localhost:8080', {answer: "山东省地方"})
+    postData('http://localhost:8080', {answer: "山东省地方"})
 </script>
 </body>
 </html>

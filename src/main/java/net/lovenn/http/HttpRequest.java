@@ -17,9 +17,9 @@ public class HttpRequest {
     private String requestURI;
     private String httpVersion;
     private Map<String, String> generalHeader = new HashMap<>();
-    private Map<String, String> responseHeader = new HashMap<>();
+    private Map<String, String> requestHeader = new HashMap<>();
     private Map<String, String> entityHeader = new HashMap<>();
-    private StringBuilder messageBody = new StringBuilder();
+    private byte[] messageBody;
 
     public String getMethod() {
         return method;
@@ -45,15 +45,23 @@ public class HttpRequest {
         this.httpVersion = httpVersion;
     }
 
-    public void parse(ByteBuffer buffer) throws CharacterCodingException {
-        buffer.flip();
-        String receivedString = Charset.forName(LCS).newDecoder().decode(buffer).toString();
-        String[] requestMessage = receivedString.split(CRLF);
-        String[] requestLine = requestMessage[0].split(SP);
-        this.setMethod(requestLine[0]);
-        this.setRequestURI(requestLine[1]);
-        this.setHttpVersion(requestLine[2]);
+    public void addGeneralHeader(String field, String value) {
+        generalHeader.put(field, value);
+    }
 
+    public void addRequestHeader(String field, String value) {
+        requestHeader.put(field, value);
+    }
 
+    public void addEntityHeader(String field, String value) {
+        entityHeader.put(field, value);
+    }
+
+    public byte[] getMessageBody() {
+        return messageBody;
+    }
+
+    public void setMessageBody(byte[] messageBody) {
+        this.messageBody = messageBody;
     }
 }

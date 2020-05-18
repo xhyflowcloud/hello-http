@@ -1,9 +1,40 @@
 package net.lovenn.http;
 
-public enum HeadEnum {
-    ;
+import java.util.HashMap;
+import java.util.Map;
 
-    public enum  EntityHeadEnum {
+public class HeadEnum {
+    static final Map<String, IEnum> headerMap = new HashMap<>();
+    static {
+       for (EntityHeadEnum entity : EntityHeadEnum.values()) {
+           headerMap.put(entity.getField(), entity);
+       }
+
+        for (GeneralHeadEnum general : GeneralHeadEnum.values()) {
+            headerMap.put(general.getField(), general);
+        }
+
+        for (RequestHeadEnum request : RequestHeadEnum.values()) {
+            headerMap.put(request.getField(), request);
+        }
+
+        for (ResponseHeadEnum response : ResponseHeadEnum.values()) {
+            headerMap.put(response.getField(), response);
+        }
+    }
+
+    public static boolean contain(String field) {
+        return headerMap.containsKey(field);
+    }
+
+    public static IEnum get(String field) {
+        return headerMap.get(field);
+    }
+
+
+    public interface IEnum {}
+
+    enum  EntityHeadEnum implements IEnum{
 
         ALLOW("Allow", "allow"),
         CONTENT_ENCODING("Content-Encoding", "content-encoding"),
@@ -36,7 +67,7 @@ public enum HeadEnum {
         }
     }
 
-    public enum  GeneralHeadEnum {
+    enum  GeneralHeadEnum implements IEnum{
 
         CACHE_CONTROL("Cache-Control", "cache-control"),
         CONNECTION("Connection", "connection"),
@@ -68,7 +99,7 @@ public enum HeadEnum {
         }
     }
 
-    public enum  RequestHeadEnum {
+    enum  RequestHeadEnum implements IEnum{
 
         ACCEPT("Accept", "accept"),
         ACCEPT_CHARSET("Accept-Charset", "accept-charset"),
@@ -110,7 +141,7 @@ public enum HeadEnum {
         }
     }
 
-    public enum  ResponseHeadEnum {
+    enum  ResponseHeadEnum implements IEnum{
 
         ACCEPT_RANGES("Accept-Ranges", "accept-ranges"),
         AGE("Age", "age"),
