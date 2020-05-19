@@ -58,7 +58,6 @@ public class Handler implements Runnable {
     }
 
     synchronized void send() throws IOException {
-        sc.write(output);
         if (outputIsComplete()) {
             sk.cancel();
         }
@@ -76,7 +75,7 @@ public class Handler implements Runnable {
 
     synchronized void processHandOff() {
         state = SENDING; // or rebind attachment
-        sk.interestOps(SelectionKey.OP_WRITE);
+        //sk.interestOps(SelectionKey.OP_WRITE);
     }
 
     public class Processor implements Runnable{
@@ -92,8 +91,41 @@ public class Handler implements Runnable {
 
         @Override
         public void run() {
+            SimpleHttpService simpleHttpService = new SimpleHttpService(sc);
+            simpleHttpService.addHttpHandler(new SimpleHttpHandler(simpleHttpService));
+            simpleHttpService.service(request, response);
+            try {
+                sc.write(HttpUtils.deparseHttpResponse(response));
+                sc.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             processHandOff();
 
+        }
+    }
+
+
+    class SimpleHttpHandler implements HttpHandler{
+
+        private HttpService httpService;
+
+        public SimpleHttpHandler(HttpService httpService) {
+            this.httpService = httpService;
+        }
+
+        @Override
+        public HttpService getHttpService() {
+            return httpService;
+        }
+
+        @Override
+        public void handle(HttpRequest request, HttpResponse response) {
+            System.out.println(request);
+            response.setHttpVersion(HttpVersionEnum.HTTP1_1.getValue());
+            response.setStatusCode(HttpStatusCodeEnum.OK.getCode());
+            response.setStatusCode(HttpStatusCodeEnum.OK.getDescription());
+            response.write("Hello world");
         }
     }
 

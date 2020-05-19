@@ -8,21 +8,9 @@ import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
 import java.nio.charset.Charset;
 
-public class HttpHandler implements Runnable {
+public interface HttpHandler {
 
-    private final SocketChannel channel;
+    HttpService getHttpService();
 
-    private final HttpRequest request;
-
-    private final HttpResponse response;
-
-    public HttpHandler(SocketChannel channel, HttpRequest request, HttpResponse response) {
-        this.channel = channel;
-        this.request = request;
-        this.response = response;
-    }
-
-    public void run() {
-
-    }
+    void handle(HttpRequest request, HttpResponse response);
 }

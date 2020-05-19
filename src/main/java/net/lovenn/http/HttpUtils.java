@@ -1,8 +1,10 @@
 package net.lovenn.http;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.ByteBuffer;
 import java.nio.charset.CharacterCodingException;
 import java.nio.charset.Charset;
+import java.util.Map;
 
 public class HttpUtils {
     static final String CR = "\r";
@@ -68,5 +70,38 @@ public class HttpUtils {
             }
         }
         return ibody;
+    }
+
+    static ByteBuffer deparseHttpResponse(HttpResponse httpResponse) {
+        StringBuilder response = new StringBuilder();
+
+        //设置 Status-Line
+        response.append(httpResponse.getHttpVersion()).append(SP);
+        response.append(httpResponse.getStatusCode()).append(SP);
+        response.append(httpResponse.getReasonPhrase()).append(CRLF);
+
+        //设置General Header
+        if(httpResponse.getGeneralHeader()!= null && !httpResponse.getGeneralHeader().isEmpty()) {
+            for (Map.Entry<String, String> general: httpResponse.getGeneralHeader().entrySet()) {
+                response.append(general.getKey()).append(":").append(general.getValue()).append(CRLF);
+            }
+        }
+        //设置Response Header
+        if(httpResponse.getResponseHeader() != null && !httpResponse.getResponseHeader().isEmpty()) {
+            for (Map.Entry<String, String> general: httpResponse.getResponseHeader().entrySet()) {
+                response.append(general.getKey()).append(":").append(general.getValue()).append(CRLF);
+            }
+        }
+        //设置Entity Header
+        if(httpResponse.getEntityHeader() != null && !httpResponse.getEntityHeader().isEmpty()) {
+            for (Map.Entry<String, String> general: httpResponse.getEntityHeader().entrySet()) {
+                response.append(general.getKey()).append(":").append(general.getValue()).append(CRLF);
+            }
+        }
+        //设置空行
+        response.append(CRLF);
+        //设置MessageBody
+        response.append(httpResponse.getMessageBody());
+        return ByteBuffer.wrap(response.toString().getBytes());
     }
 }

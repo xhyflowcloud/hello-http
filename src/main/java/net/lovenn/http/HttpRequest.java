@@ -3,6 +3,7 @@ package net.lovenn.http;
 import java.nio.ByteBuffer;
 import java.nio.charset.CharacterCodingException;
 import java.nio.charset.Charset;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -63,5 +64,18 @@ public class HttpRequest {
 
     public void setMessageBody(byte[] messageBody) {
         this.messageBody = messageBody;
+    }
+
+    @Override
+    public String toString() {
+        return "HttpRequest{" +
+                "method='" + method + '\'' +
+                ", requestURI='" + requestURI + '\'' +
+                ", httpVersion='" + httpVersion + '\'' +
+                ", generalHeader=" + generalHeader +
+                ", requestHeader=" + requestHeader +
+                ", entityHeader=" + entityHeader +
+                ", messageBody=" + Arrays.toString(messageBody) +
+                '}';
     }
 }
