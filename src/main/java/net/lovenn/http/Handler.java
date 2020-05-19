@@ -18,9 +18,9 @@ public class Handler implements Runnable {
 
     static final int MAXIN = Short.MAX_VALUE, MAXOUT = Short.MAX_VALUE;
 
-    static final ByteBuffer INPUT = ByteBuffer.allocate(MAXIN);
+    final ByteBuffer INPUT = ByteBuffer.allocate(MAXIN);
 
-    static final ByteBuffer OUTPUT = ByteBuffer.allocate(MAXOUT);
+    final ByteBuffer OUTPUT = ByteBuffer.allocate(MAXOUT);
 
     static final int READING = 0, SENDING = 1, PROCESSING = 3;
 
