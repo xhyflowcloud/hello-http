@@ -10,7 +10,5 @@ import java.nio.charset.Charset;
 
 public interface HttpHandler {
 
-    HttpService getHttpService();
-
     void handle(HttpRequest request, HttpResponse response);
 }

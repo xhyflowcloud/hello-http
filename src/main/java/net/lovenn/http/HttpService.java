@@ -7,9 +7,7 @@ public interface HttpService {
 
     List<HttpHandler> getHttpHandler();
 
-    void addHttpHandler(HttpHandler httpHandler);
+    void addHttpHandler(List<HttpHandler> httpHandler);
 
     void service(HttpRequest req, HttpResponse resp);
-
-    SocketChannel channel();
 }

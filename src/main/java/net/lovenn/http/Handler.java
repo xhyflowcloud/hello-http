@@ -16,19 +16,24 @@ public class Handler implements Runnable {
 
     final SocketChannel sc;
 
-    static final int MAXIN = 10000, MAXOUT = 10000;
+    static final int MAXIN = Short.MAX_VALUE, MAXOUT = Short.MAX_VALUE;
 
+    static final ByteBuffer INPUT = ByteBuffer.allocate(MAXIN);
 
-    ByteBuffer output = ByteBuffer.allocate(MAXOUT);
+    static final ByteBuffer OUTPUT = ByteBuffer.allocate(MAXOUT);
+
     static final int READING = 0, SENDING = 1, PROCESSING = 3;
-    int state = READING;
 
-    static ThreadPoolExecutor pool = new ThreadPoolExecutor(10, 10,
-                                      0L,TimeUnit.MILLISECONDS,
-                                      new LinkedBlockingQueue<Runnable>());
+    volatile int state = READING;
 
-    public Handler(Selector selector, SocketChannel sc) throws IOException {
+    final ThreadPoolExecutor pool;
+
+    List<HttpHandler> handlers;
+
+    public Handler(Selector selector, SocketChannel sc, final ThreadPoolExecutor pool, List<HttpHandler> handlers) throws IOException {
         this.sc = sc;
+        this.pool = pool;
+        this.handlers = handlers;
         sc.configureBlocking(false);
         sk = sc.register(selector, SelectionKey.OP_READ, this);
         selector.wakeup();
@@ -36,97 +41,79 @@ public class Handler implements Runnable {
 
     @Override
     public void run() {
+        if (state == READING) {
+            read();
+        } else if (state == SENDING) {
+            send();
+        }
+    }
+
+    void read() {
         try {
-            if (state == READING) {
-                read();
-            } else if (state == SENDING) {
-                send();
+            if (inputIsComplete()) {
+                process();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            if (sc != null) {
+                try {
+                    sc.close();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 
-    synchronized void read() throws IOException {
-        ByteBuffer input = ByteBuffer.allocate(MAXIN);
-        sc.read(input);
-        HttpRequest request = HttpUtils.parseHttpRequest(input);
-        if (inputIsComplete()) {
-            state = PROCESSING;
-            pool.execute(new Processor(request, new HttpResponse()));
+    void send() {
+        try {
+            if (outputIsComplete()) {
+                sc.close();
+                OUTPUT.clear();
+            }
+        } catch (IOException e) {
+            if (sc != null) {
+                try {
+                    sc.close();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+            }
         }
     }
 
-    synchronized void send() throws IOException {
-        if (outputIsComplete()) {
-            sk.cancel();
-        }
-    }
-
-    private boolean inputIsComplete() {
+    private boolean inputIsComplete() throws IOException {
+        sc.read(INPUT);
         return true;
     }
 
-    private boolean outputIsComplete() {
+    private boolean outputIsComplete() throws IOException {
+        OUTPUT.flip();
+        sc.write(OUTPUT);
         return true;
     }
 
-    private void process() { /* ... */ }
+    private synchronized void process() {
+        state = PROCESSING;
+        pool.execute(new Processor());
+    }
 
     synchronized void processHandOff() {
-        state = SENDING; // or rebind attachment
-        //sk.interestOps(SelectionKey.OP_WRITE);
+        state = SENDING;
+        sk.interestOps(SelectionKey.OP_WRITE);
+        sk.selector().wakeup();
     }
 
-    public class Processor implements Runnable{
-        private final HttpRequest request;
-
-        private final HttpResponse response;
-
-
-        public Processor(HttpRequest request, HttpResponse response) {
-            this.request = request;
-            this.response = response;
-        }
+    public class Processor implements Runnable {
 
         @Override
         public void run() {
-            SimpleHttpService simpleHttpService = new SimpleHttpService(sc);
-            simpleHttpService.addHttpHandler(new SimpleHttpHandler(simpleHttpService));
-            simpleHttpService.service(request, response);
-            try {
-                sc.write(HttpUtils.deparseHttpResponse(response));
-                sc.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            SimpleHttpService simpleHttpService = new SimpleHttpService();
+            simpleHttpService.addHttpHandler(handlers);
+            HttpResponse response = new HttpResponse();
+            simpleHttpService.service(HttpUtils.parseHttpRequest(INPUT), response);
+            INPUT.clear();
+            OUTPUT.put(HttpUtils.deparseHttpResponse(response));
             processHandOff();
-
         }
     }
-
-
-    class SimpleHttpHandler implements HttpHandler{
-
-        private HttpService httpService;
-
-        public SimpleHttpHandler(HttpService httpService) {
-            this.httpService = httpService;
-        }
-
-        @Override
-        public HttpService getHttpService() {
-            return httpService;
-        }
-
-        @Override
-        public void handle(HttpRequest request, HttpResponse response) {
-            System.out.println(request);
-            response.setHttpVersion(HttpVersionEnum.HTTP1_1.getValue());
-            response.setStatusCode(HttpStatusCodeEnum.OK.getCode());
-            response.setStatusCode(HttpStatusCodeEnum.OK.getDescription());
-            response.write("Hello world");
-        }
-    }
-
 }

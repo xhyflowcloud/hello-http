@@ -6,7 +6,9 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.ServerSocketChannel;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Reactor implements Runnable {
 
@@ -14,15 +16,16 @@ public class Reactor implements Runnable {
 
     final ServerSocketChannel ssc;
 
-    public Reactor(int port) throws IOException {
+    public Reactor(int port, ThreadPoolExecutor pool, List<HttpHandler> handlers) throws IOException {
         selector = Selector.open();
         ssc  = ServerSocketChannel.open();
         ssc.socket().bind(new InetSocketAddress(port));
         ssc.configureBlocking(false);
-        ssc.register(selector, SelectionKey.OP_ACCEPT, new Acceptor(selector, ssc));
+        ssc.register(selector, SelectionKey.OP_ACCEPT, new Acceptor(selector, ssc, pool, handlers));
 
     }
 
+    @Override
     public void run() {
         while (!Thread.interrupted()) {
             try {

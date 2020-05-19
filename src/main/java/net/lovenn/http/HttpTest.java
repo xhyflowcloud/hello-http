@@ -13,8 +13,8 @@ import java.util.concurrent.CountDownLatch;
 
 public class HttpTest {
     public static void main(String[] args) throws IOException, InterruptedException {
-        new Reactor(8080).run();
-        CountDownLatch latch = new CountDownLatch(1);
-        latch.await();
+        HttpServer httpServer = new HttpServer();
+        httpServer.addHttpHandler(new SimpleHttpHandler());
+        httpServer.run();
     }
 }
